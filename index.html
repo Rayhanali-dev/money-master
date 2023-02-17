@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#31A5AC',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    
+    <header>
+        <h1 class="text-center text-2xl md:text-6xl my-6 font-bold text-clifford">Money Master <i class="fa-solid fa-sack-dollar text-amber-800"></i></h1>
+    </header>
+    <main>
+        <section class="max-w-7xl mx-auto p-5">
+            <div class="grid sm:grid-cols-2 gap-9">
+                <div>
+                    <img src="images/money.jpg" alt="">
+                </div>
+                <div class="bg-slate-500 justify-center grid items-center">
+                    <div class="text-center">
+                        <h3 class="text-3xl font-bold text-slate-900 my-5 ml-9">Income</h3>
+                        <div>
+                            <label class="text-1xl">Income:</label>
+                            <input id="income-field" class="bg-transparent border" type="text">
+                        </div>
+                        <h3 class="text-3xl font-bold text-slate-900 my-5 ml-9">Expenses</h3>
+                        <div>
+                            <label class="text-1xl">Food:</label>
+                            <input id="food-field" class="bg-transparent border ml-2 mb-4" type="text">
+                        </div>
+                        <div>
+                            <label class="text-1xl">Rent:</label>
+                            <input id="rent-field" class="bg-transparent border ml-3 mb-4" type="text">
+                        </div>
+                        <div>
+                            <label class="text-1xl -ml-2">Clothes:</label>
+                            <input id="clothed-field" class="bg-transparent border mb-7" type="text">
+                        </div>
+                        <button id="calculate" type="button" class="bg-red-500 w-36 text-white text-2xl mx-auto py-2 ml-9 mb-5">Calculate</button>
+                        <h3 class="text-2xl ml-9 font-bold">Total Expenses: <span id="total-expense">00</span></h3>
+                        <h3 class="text-2xl ml-9 font-bold mb-5">Balance: <span id="balance">00</span></h3>
+                        <div>
+                            <label>Save:</label>
+                            <input id="percentage-amount" class="bg-transparent border w-16 py-1" type="text">
+                            <span class="font-bold mx-5">%</span>
+                            <button id="save" type="button" class="bg-red-500 text-white text-1xl px-6 py-2 mb-5">Save</button>
+                        </div>
+                        <h3 class="text-2xl ml-9 font-bold mb-2">Saving Amount: <span id="saving-amount">00</span></h3>
+                        <h3 class="text-2xl ml-9 font-bold">Remaining Balance: <span id="remaining-amount">00</span></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
